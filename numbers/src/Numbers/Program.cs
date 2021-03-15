@@ -11,6 +11,7 @@ namespace Numbers
             IntegerMathFlow();
             OperatorPrecedenceFlow();
             IntegerPrecisionFlow();
+            DoubleMathFlow();
         }
 
         static void IntegerMathFlow()
@@ -51,6 +52,19 @@ namespace Numbers
             IntegerPrecision.IntegerPrecisionMath(a, b, c);
             IntegerPrecision.IntegerLimits();
             IntegerPrecision.IntegerOverflow();
+            Console.ReadKey();
+        }
+
+        static void DoubleMathFlow()
+        {
+            Console.WriteLine("Give me three operands (positive real only): ");
+            double a = double.Parse(Console.ReadLine()),
+                   b = double.Parse(Console.ReadLine()),
+                   c = double.Parse(Console.ReadLine());
+
+            DoubleMath.SimpleDoubleMath(a, b, c);
+            DoubleMath.DoubleInterval(); 
+            DoubleMath.DoublePrecision();
             Console.ReadKey();
         }
     }
