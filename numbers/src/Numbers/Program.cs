@@ -10,6 +10,7 @@ namespace Numbers
 
             IntegerMathFlow();
             OperatorPrecedenceFlow();
+            IntegerPrecisionFlow();
         }
 
         static void IntegerMathFlow()
@@ -40,5 +41,17 @@ namespace Numbers
             Console.ReadKey();
         }
 
+        static void IntegerPrecisionFlow()
+        {
+            Console.WriteLine("Give me three operands (positive integer only): ");
+            int a = int.Parse(Console.ReadLine()),
+                b = int.Parse(Console.ReadLine()),
+                c = int.Parse(Console.ReadLine());
+
+            IntegerPrecision.IntegerPrecisionMath(a, b, c);
+            IntegerPrecision.IntegerLimits();
+            IntegerPrecision.IntegerOverflow();
+            Console.ReadKey();
+        }
     }
 }
